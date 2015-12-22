@@ -16,7 +16,7 @@ import com.melon.helloes.domain.SongDoc;
  *
  */
 public class MCrawlerBulkRunner {
-	private static final String INPUT_FILE_PATH = "dummy/song_indexing_target.txt";
+	private static final String INPUT_FILE_PATH = "helloes/dummy/song_indexing_target.txt";
 	private static final String SONG_DETAIL_URL = "http://www.melon.com/song/detail.json?songId="; 
 	private static final String OUTPUT_FILE_PATH = "/home/socurites/Desktop/result4.txt";
 	

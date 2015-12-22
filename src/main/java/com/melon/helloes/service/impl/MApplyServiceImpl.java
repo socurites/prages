@@ -128,7 +128,7 @@ public class MApplyServiceImpl extends MAbstractSearchServiceImpl implements MAp
 		paramMap.put("term", parentItem.getArtistName());
 		paramMap.put("size", size + "");
 		
-		String result = doSearch(paramMap, "search_dsl/apply/" + dslLocation, "count");
+		String result = doSearch(paramMap, "helloes/search_dsl/apply/" + dslLocation, "count");
 		JsonElement root = new JsonParser().parse(result);
 		JsonArray jsonArray = null;
 		NetworkItem dependentItem = null;

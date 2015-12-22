@@ -38,7 +38,7 @@ public class MAnalysisServiceImpl extends MAbstractSearchServiceImpl implements 
 		paramMap.put("artistId", artistId);
 		paramMap.put("size", searchDepth + "");
 		
-		String resultInfo = doSearch(paramMap, "search_dsl/common/get_artist_lyric_list.dsl", null);
+		String resultInfo = doSearch(paramMap, "helloes/search_dsl/common/get_artist_lyric_list.dsl", null);
 		
 		JsonElement root = new JsonParser().parse(resultInfo);
 		JsonElement jsonElement = null;

@@ -21,7 +21,7 @@ public class MSearchServiceImpl extends MAbstractSearchServiceImpl implements MS
 		Map<String, String> paramMap = new HashMap<String, String>();
 		paramMap.put("term", term);
 		
-		return doSearch(paramMap, "search_dsl/overview/intro.dsl", null);
+		return doSearch(paramMap, "helloes/search_dsl/overview/intro.dsl", null);
 	}
 
 
@@ -32,7 +32,7 @@ public class MSearchServiceImpl extends MAbstractSearchServiceImpl implements MS
 		paramMap.put("term", term);
 		paramMap.put("size", size + "");
 		
-		String result = doSearch(paramMap, "search_dsl/overview/prefix_artist_aggs.dsl", "count");
+		String result = doSearch(paramMap, "helloes/search_dsl/overview/prefix_artist_aggs.dsl", "count");
 		
 		return result;
 	}
@@ -42,8 +42,8 @@ public class MSearchServiceImpl extends MAbstractSearchServiceImpl implements MS
 		Map<String, String> paramMap = new HashMap<String, String>();
 		paramMap.put("artistId", artistId);
 		
-		String resultAgg = doSearch(paramMap, "search_dsl/overview/artist_detail_aggs.dsl", "count");
-		String resultInfo = doSearch(paramMap, "search_dsl/common/get_artist_info.dsl", null);
+		String resultAgg = doSearch(paramMap, "helloes/search_dsl/overview/artist_detail_aggs.dsl", "count");
+		String resultInfo = doSearch(paramMap, "helloes/search_dsl/common/get_artist_info.dsl", null);
 		
 		return "{ \"aggs\": " + resultAgg + ", \"info\": " + resultInfo + "}";
 	}
@@ -58,7 +58,7 @@ public class MSearchServiceImpl extends MAbstractSearchServiceImpl implements MS
 			paramMap.put("synonym", MLanguageUtil.convertKo2Eng(SynonymDicUtil.getTerm(term)));
 		}
 		
-		String result = doSearch(paramMap, "search_dsl/morpheme/prefix_artist_aggs_with_synonym.dsl", "count");
+		String result = doSearch(paramMap, "helloes/search_dsl/morpheme/prefix_artist_aggs_with_synonym.dsl", "count");
 		
 		return result;
 	}
