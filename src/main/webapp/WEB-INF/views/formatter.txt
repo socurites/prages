@@ -1,0 +1,29 @@
+{
+   "number_of_shards": 10
+   "number_of_replicas": 0
+   "refresh_interval": "-1"
+   "translog.flush_threshold_ops": 5000
+   "_source" : {
+     "enabled" : "true"
+    }
+     "_all" : {
+     "enabled" : "false"
+    }
+     "index" : {
+         "analysis" : {
+             "analyzer" : {
+                 "melon_korean_review_analyzer" : {
+                     "type": "custom"
+                     "tokenizer": "korean_tokenizer"
+                     "filter": ["lowercase"]
+                 }
+             }
+             "tokenizer" : {
+                 "korean_tokenizer" : {
+                     "type": "mecab_ko_standard_tokenizer"
+                     "mecab_dic_dir" : "/home/elasticsearch/mecab/lib/mecab/dic/mecab-ko-dic"
+                 }
+             }
+         }
+ 	}
+ }

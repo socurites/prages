@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- Templates -->
+	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
+		<put-attribute name="title" value="Melon-HelloES" />
+		<put-attribute name="header" value="/WEB-INF/tiles/layout/view/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/layout/view/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layout/view/footer.jsp" />
+	</definition>
+
+	<!-- Pages -->
+	<definition name="site.dashboard" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="site.developer.install" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/developer/install.jsp" />
+	</definition>
+	
+	
+	<definition name="site.overview.intro" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/overview/intro.jsp" />
+	</definition>
+	<definition name="site.overview.search" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/overview/search.jsp" />
+	</definition>
+	
+	<definition name="site.morpheme.intro" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/morpheme/intro.jsp" />
+	</definition>
+	<definition name="site.morpheme.synonym" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/morpheme/synonym.jsp" />
+	</definition>
+	
+	<definition name="site.apply.power_network" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/views/apply/power_network.jsp" />
+	</definition>	
+</tiles-definitions>
