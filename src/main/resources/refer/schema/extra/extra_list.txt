@@ -1,0 +1,182 @@
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 9271, "artistId": 100094, "artistName": "자우림", "title": "뱀", "genre": "GC0035", "genreText": "Rock", "issueDate": "20000704"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 432309, "artistId": 1099, "artistName": "박정현", "title": "꿈에", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "20020615"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 493148, "artistId": 104972, "artistName": "Acoustic Cafe", "title": "LastCarnival", "genre": "GC0029", "genreText": "New Age", "issueDate": "20031104"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 1908050, "artistId": 12307, "artistName": "한희정", "title": "Drama(Feat.이언FromMOT)", "genre": "GC0035", "genreText": "RockGC0016", "issueDate": "20080724"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47913, "artistId": 843, "artistName": "신중현", "title": "미인", "genre": "GC0035", "genreText": "Rock", "issueDate": "19871201"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3824, "artistId": 1203, "artistName": "제이", "title": "어제처럼", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "20000421"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 4571281, "artistId": 559686, "artistName": "해리빅버튼", "title": "Coffee,CigarettesAndRock`N`Roll", "genre": "GC0035", "genreText": "Rock", "issueDate": "20140402"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3570030, "artistId": 569215, "artistName": "투개월", "title": "PokerFace(LadyGaGa)", "genre": "GC0011", "genreText": "Dance", "issueDate": "20111010"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 317803, "artistId": 983, "artistName": "이소라", "title": "외톨이", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20021011"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 27638, "artistId": 1121, "artistName": "박지윤", "title": "성인식", "genre": "GC0011", "genreText": "Dance", "issueDate": "20000726"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 46294, "artistId": 101014, "artistName": "거리의 시인들", "title": "빙(永)", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "19991001"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 61953, "artistId": 101582, "artistName": "티삼스", "title": "매일매일기다려", "genre": "GC0035", "genreText": "Rock", "issueDate": "19881110"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 20245, "artistId": 1130, "artistName": "박진영", "title": "Honey", "genre": "GC0011", "genreText": "Dance", "issueDate": "20010607"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 288030, "artistId": 2174, "artistName": "Ricky Martin", "title": "Livin`LaVidaLoca", "genre": "GC0032", "genreText": "Pop", "issueDate": "19990511"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 7148, "artistId": 1868, "artistName": "서태지", "title": "환상속의그대", "genre": "GC0035", "genreText": "Rock", "issueDate": "20010411"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 73949, "artistId": 100180, "artistName": "황신혜 밴드", "title": "짬뽕", "genre": "GC0035", "genreText": "Rock", "issueDate": "19970301"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3962489, "artistId": 448440, "artistName": "9와 숫자들", "title": "눈물바람", "genre": "GC0035", "genreText": "Rock", "issueDate": "20121115"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 329034, "artistId": 28606, "artistName": "Alizee", "title": "MonMaquis", "genre": "GC0040", "genreText": "World", "issueDate": "20021001"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 33142, "artistId": 100005, "artistName": "DJ DOC", "title": "삐걱삐걱", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "19970401"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 19091, "artistId": 889, "artistName": "김건모", "title": "미안해요", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20010514"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 333514, "artistId": 100342, "artistName": "Limp Bizkit", "title": "MyGeneration", "genre": "GC0035", "genreText": "Rock", "issueDate": "20001001"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 19095, "artistId": 889, "artistName": "김건모", "title": "빗속의여인", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20010514"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47535, "artistId": 101022, "artistName": "이치현과 벗님들", "title": "사랑의슬픔", "genre": "GC0035", "genreText": "Rock", "issueDate": "19890310"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 50012, "artistId": 100161, "artistName": "서태지와 아이들", "title": "난알아요", "genre": "GC0011", "genreText": "Dance", "issueDate": "19920323"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 5100293, "artistId": 27159, "artistName": "Aaron Neville", "title": "EverybodyPlaysTheFool(7`ListenBabyMix)", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "20140626"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 314165, "artistId": 4770, "artistName": "양동근", "title": "골목길", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "20020513"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 48479, "artistId": 23, "artistName": "전영록", "title": "불티", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19870300"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 444472, "artistId": 102154, "artistName": "함중아와 양키스", "title": "풍문으로들었소", "genre": "GC0035", "genreText": "Rock", "issueDate": "19920715"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 358273, "artistId": 10364, "artistName": "Snoop Dogg", "title": "WhoAmI(What`sMyName)?", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "20020201"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 49565, "artistId": 4838, "artistName": "임재범", "title": "이밤이지나면", "genre": "GC0035", "genreText": "Rock", "issueDate": "19910000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3891949, "artistId": 102000, "artistName": "4월과 5월", "title": "장미", "genre": "GC0016", "genreText": "Folk", "issueDate": "19781115"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2212365, "artistId": 406712, "artistName": "2NE1", "title": "IDon`tCare", "genre": "GC0011", "genreText": "Dance", "issueDate": "20090708"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 287303, "artistId": 28214, "artistName": "Josh Groban", "title": "Vincent", "genre": "GC0032", "genreText": "Pop", "issueDate": "20011120"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 32488, "artistId": 101163, "artistName": "레드플러스", "title": "그녀는...", "genre": "GC0035", "genreText": "Rock", "issueDate": "19970101"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 1798588, "artistId": 236797, "artistName": "태연 (Taeyeon)", "title": "만약에", "genre": "GC0012", "genreText": "Drama", "issueDate": "20080123"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2118196, "artistId": 100148, "artistName": "015B", "title": "신인류의사랑", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19960301"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 4268993, "artistId": 643551, "artistName": "투빅", "title": "사랑하고있습니다", "genre": "GC0012", "genreText": "Drama", "issueDate": "20131008"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 1482807, "artistId": 103690, "artistName": "10cc", "title": "I`mNotInLove", "genre": "GC0035", "genreText": "Rock", "issueDate": "20061105"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 1648285, "artistId": 107725, "artistName": "클래지콰이", "title": "RomeoNJuliet(`우리결혼했어요`알렉스와신애듀엣곡)", "genre": "GC0014", "genreText": "Electronica", "issueDate": "20070607"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 32823, "artistId": 100099, "artistName": "델리스파이스", "title": "챠우챠우-아무리애를쓰고막아보려해도너의목소리가들려", "genre": "GC0035", "genreText": "Rock", "issueDate": "19970800"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 4098747, "artistId": 721703, "artistName": "히스토리", "title": "Dreamer(Narr.아이유)", "genre": "GC0011", "genreText": "Dance", "issueDate": "20130426"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 38662, "artistId": 895, "artistName": "김경호", "title": "나를슬프게하는사람들", "genre": "GC0035", "genreText": "Rock", "issueDate": "19970000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 431038, "artistId": 12943, "artistName": "2Soo", "title": "들어봐어때(Feat.Miae,SoulForLifeA.K.A문명진)", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "00000000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 269553, "artistId": 104588, "artistName": "Santana", "title": "Smooth(feat.RobThomas)", "genre": "GC0035", "genreText": "Rock", "issueDate": "00000000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 27845, "artistId": 2165, "artistName": "보아 (BoA)", "title": "ID;PeaceB", "genre": "GC0011", "genreText": "Dance", "issueDate": "20000825"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 356674, "artistId": 103533, "artistName": "Accept", "title": "MetalHeart", "genre": "GC0035", "genreText": "Rock", "issueDate": "20020301"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 51221, "artistId": 161178, "artistName": "송창식, 윤형주, 김세환", "title": "BridgeOverTroubledWater", "genre": "GC0016", "genreText": "Folk", "issueDate": "19840300"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47978, "artistId": 5231, "artistName": "김추자", "title": "님은먼곳에", "genre": "GC0035", "genreText": "Rock", "issueDate": "19871201"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 334046, "artistId": 100296, "artistName": "Guns N` Roses", "title": "YouCouldBeMine", "genre": "GC0035", "genreText": "Rock", "issueDate": "19910917"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2360588, "artistId": 100397, "artistName": "3호선 버터플라이", "title": "깊은밤안개속", "genre": "GC0035", "genreText": "Rock", "issueDate": "20091119"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 65652, "artistId": 1027, "artistName": "한영애", "title": "여울목", "genre": "GC0016", "genreText": "Folk", "issueDate": "19860110"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 271505, "artistId": 100880, "artistName": "Nightwish", "title": "Wishmaster", "genre": "GC0035", "genreText": "Rock", "issueDate": "20000600"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 4658849, "artistId": 698291, "artistName": "15& (박지민, 백예린)", "title": "티가나나봐", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "20140526"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 270588, "artistId": 100212, "artistName": "The Corrs", "title": "EverybodyHurts", "genre": "GC0035", "genreText": "Rock", "issueDate": "19991112"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3403571, "artistId": 2925, "artistName": "토마스 쿡", "title": "아무것도아닌나", "genre": "GC0016", "genreText": "Folk", "issueDate": "20110517"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2956227, "artistId": 12307, "artistName": "한희정", "title": "입맞춤,입술의춤", "genre": "GC0016", "genreText": "Folk", "issueDate": "20101006"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3967710, "artistId": 100295, "artistName": "Ace Of Base", "title": "AllThatSheWants", "genre": "GC0014", "genreText": "Electronica", "issueDate": "19930101"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 8921, "artistId": 2267, "artistName": "왁스", "title": "오빠", "genre": "GC0011", "genreText": "Dance", "issueDate": "20001114"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 33728, "artistId": 925, "artistName": "김동률", "title": "기적(DuetWith이소은)", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19981201"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47592, "artistId": 100594, "artistName": "부활", "title": "회상Ⅲ", "genre": "GC0035", "genreText": "Rock", "issueDate": "19890600"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 331176, "artistId": 101787, "artistName": "Extreme", "title": "GetTheFunkOut", "genre": "GC0035", "genreText": "Rock", "issueDate": "19900719"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 283978, "artistId": 7313, "artistName": "Bob Dylan", "title": "MakeYouFeelMyLove", "genre": "GC0016", "genreText": "Folk", "issueDate": "19970930"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3593219, "artistId": 101968, "artistName": "히식스", "title": "사랑의상처", "genre": "GC0035", "genreText": "Rock", "issueDate": "20040901"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 8302, "artistId": 3305, "artistName": "성시경", "title": "내게오는길", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20010400"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47009, "artistId": 1129, "artistName": "태진아", "title": "사랑은아무나하나", "genre": "GC0001", "genreText": "Adult Contemporary", "issueDate": "20010205"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 19807, "artistId": 100742, "artistName": "브라운 아이즈", "title": "벌써일년", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "20010607"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2160048, "artistId": 406712, "artistName": "2NE1", "title": "Fire", "genre": "GC0011", "genreText": "Dance", "issueDate": "20090506"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 280862, "artistId": 28691, "artistName": "Roy Orbison", "title": "InDreams", "genre": "GC0032", "genreText": "Pop", "issueDate": "19960000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 311188, "artistId": 105097, "artistName": "Van Halen", "title": "Jump", "genre": "GC0035", "genreText": "Rock", "issueDate": "19840314"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 10438, "artistId": 100007, "artistName": "god", "title": "하늘색풍선", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20001103"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 284480, "artistId": 13245, "artistName": "Michael Franks", "title": "Antonio`sSong", "genre": "GC0019", "genreText": "Jazz", "issueDate": "19980512"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 309325, "artistId": 16320, "artistName": "JAY Z", "title": "SoGhetto", "genre": "GC0034", "genreText": "Rap / Hip-hop", "issueDate": "19990000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 10693, "artistId": 100158, "artistName": "미선이", "title": "진달래타이머", "genre": "GC0035", "genreText": "Rock", "issueDate": "00000000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 1768642, "artistId": 5115, "artistName": "황치훈", "title": "추억속의그대", "genre": "GC0001", "genreText": "Adult Contemporary", "issueDate": "19881215"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 50733, "artistId": 100148, "artistName": "015B", "title": "아주오래된연인들", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19920800"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 308936, "artistId": 151514, "artistName": "David Bowie", "title": "ZiggyStardust", "genre": "GC0035", "genreText": "Rock", "issueDate": "19971000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 324193, "artistId": 2105, "artistName": "Melanie Safka", "title": "RubyTuesday", "genre": "GC0016", "genreText": "Folk", "issueDate": "20000901"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2284358, "artistId": 103789, "artistName": "99Anger", "title": "MusicBringsMeHere", "genre": "GC0035", "genreText": "Rock", "issueDate": "20090909"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 3731994, "artistId": 253866, "artistName": "2AM", "title": "너도나처럼", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20120312"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 273576, "artistId": 28192, "artistName": "Sting", "title": "ShapeOfMyHeart", "genre": "GC0032", "genreText": "Pop", "issueDate": "19930309"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 2603554, "artistId": 100397, "artistName": "3호선 버터플라이", "title": "꿈꾸는나비", "genre": "GC0035", "genreText": "Rock", "issueDate": "20100310"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 37024, "artistId": 100158, "artistName": "미선이", "title": "송시", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19981030"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 269397, "artistId": 100363, "artistName": "Marilyn Manson", "title": "RockIsDead", "genre": "GC0035", "genreText": "Rock", "issueDate": "19990629"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 312082, "artistId": 6939, "artistName": "Aaliyah", "title": "TheOneIGaveMyHeartTo", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "19960827"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 33736, "artistId": 1873, "artistName": "김조한", "title": "그때로돌아가는게", "genre": "GC0033", "genreText": "R&B / Soul", "issueDate": "19990801"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 47237, "artistId": 100749, "artistName": "시인과 촌장", "title": "가시나무", "genre": "GC0016", "genreText": "Folk", "issueDate": "19880000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 49541, "artistId": 25, "artistName": "신승훈", "title": "보이지않는사랑", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19911130"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 18357, "artistId": 100014, "artistName": "토이", "title": "좋은사람(Feat.김형중)", "genre": "GC0003", "genreText": "Ballad", "issueDate": "20010510"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 273832, "artistId": 3360, "artistName": "Neil Young", "title": "CowgirlInTheSand", "genre": "GC0035", "genreText": "Rock", "issueDate": "19690000"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 325299, "artistId": 104341, "artistName": "Yes", "title": "CloseToTheEdge", "genre": "GC0035", "genreText": "Rock", "issueDate": "19720913"}
+{ "index" : { "_index" : "extra", "_type" : "list"}}
+{"songId": 63343, "artistId": 45, "artistName": "한동준", "title": "사랑의서약", "genre": "GC0003", "genreText": "Ballad", "issueDate": "19950000"}

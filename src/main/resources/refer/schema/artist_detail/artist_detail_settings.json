@@ -1,0 +1,37 @@
+{
+   "number_of_shards": 1,
+   "number_of_replicas": 0,
+   "refresh_interval": "60s",
+   "_source" : {
+     "enabled" : "true"
+    },
+     "_all" : {
+     "enabled" : "false"
+    },
+     "index" : {
+	     "analysis" : {
+	         "analyzer" : {
+	             "m_bigram_analyzer" : {
+	                 "tokenizer": "m_bigram_tokenizer"
+	             },
+	             "m_keyword_analyzer" : {
+	                 "tokenizer": "keyword",
+	                 "filter" : ["lowercase"]
+	             },
+	             "m_korean_analyzer" : {
+	                "type": "custom",
+	                "tokenizer": "mecab_ko_standard_tokenizer",
+	                "filter": ["lowercase"]
+	             }
+	         },
+	         "tokenizer" : {
+	             "m_bigram_tokenizer" : {
+	                 "type": "nGram",
+	                 "min_gram": "2",
+	                 "max_gram": "2"
+	                 
+	             }
+	         }
+		}
+	}
+}

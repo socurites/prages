@@ -1,0 +1,25 @@
+{
+     "hashtag" : {
+         "_id" : {
+             "index" : "not_analyzed",
+             "path" : "tagSeq"
+         },
+         "_source" : {
+             "enabled" : "true"
+         },
+         "_all" : {
+             "enabled" : "false"
+         },
+         "properties" : {
+         	"tagSeq"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"tagName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"docCnt"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"cateCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"imgPath"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"regDate"					: {"type" : "date"   , "store" : "yes", "index" : "not_analyzed"},
+			"modDate"					: {"type" : "date"   , "store" : "yes", "index" : "not_analyzed"},
+			"tagNameGram"				: {"type" : "string", "store" : "yes", "norms": {"enabled": "false"}, "index" : "analyzed", index_analyzer: "m_bigram_analyzer", search_analyzer: "m_bigram_analyzer"},
+			"tagNameSyllable"			: {"type" : "string"   , "store" : "yes", "index" : "not_analyzed"}
+         }
+     }
+ }

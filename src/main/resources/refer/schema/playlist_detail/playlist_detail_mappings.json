@@ -1,0 +1,27 @@
+{
+     "detail" : {
+         "_id" : {
+             "index" : "not_analyzed",
+             "path" : "plylstSeq"
+         },
+         "_source" : {
+             "enabled" : "true"
+         },
+         "_all" : {
+             "enabled" : "false"
+         },
+         "properties" : {
+         	"plylstSeq"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"memberKey"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"partrKey"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"plylstTypeCode"			: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"openYn"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"delYn"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"regDate"					: {"type" : "date"   , "store" : "yes", "index" : "not_analyzed"},
+			"updtDate"					: {"type" : "date"   , "store" : "yes", "index" : "not_analyzed"},
+			"popScore"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"tagSeqs"					: {"type" : "string", "store" : "yes", "norms": {"enabled": "false"}, "index" : "analyzed", "index_analyzer": "m_keyword_analyzer", "search_analyzer": "m_keyword_analyzer"},
+         	"tagNames"					: {"type" : "string", "store" : "yes", "norms": {"enabled": "false"}, "index" : "analyzed", "index_analyzer": "m_keyword_analyzer", "search_analyzer": "m_keyword_analyzer"}
+         }
+     }
+ }

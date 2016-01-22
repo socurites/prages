@@ -1,0 +1,35 @@
+{
+     "detail" : {
+         "_id" : {
+             "index" : "not_analyzed",
+             "path" : "cmtSeq"
+         },
+         "_source" : {
+             "enabled" : "true"
+         },
+         "_all" : {
+             "enabled" : "false"
+         },
+         "properties" : {
+         	"cmtSeq"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"contsId"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"contsTitle"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"issueDate"					: {"type" : "date",   "store" : "yes", "index" : "not_analyzed"},
+         	"contsType"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"regDate"					: {"type" : "date",   "store" : "yes", "index" : "not_analyzed"},
+         	"delYn"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"breakYn"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"secretYn"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"memberKey"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"memberNickname"			: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"artistId"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"artistName"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"artistImgPath"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"comment"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"phrase_size				: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         	"s1Keywords"				: {"type" : "string", "store" : "yes", "index" : "analyzed", "norms": {"enabled": "false"}, index_analyzer: "m_keyword_analyzer", search_analyzer: "m_keyword_analyzer"},
+         	"s2Keywords"				: {"type" : "string", "store" : "yes", "index" : "analyzed", "norms": {"enabled": "false"}, index_analyzer: "m_keyword_analyzer", search_analyzer: "m_keyword_analyzer"},
+         	"s3Keywords"				: {"type" : "string", "store" : "yes", "index" : "analyzed", "norms": {"enabled": "false"}, index_analyzer: "m_keyword_analyzer", search_analyzer: "m_keyword_analyzer"}
+         }
+     }
+ }

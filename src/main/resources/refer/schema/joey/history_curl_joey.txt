@@ -1,0 +1,30 @@
+# delete index
+curl -XDELETE 'http://localhost:9200/joey'
+curl -XPUT 'http://localhost:9200/joey/' -d @joey_settings.json
+curl -XPUT 'http://localhost:9200/joey/_mappings/song?pretty=true' -d @joey_mappings.json
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_1.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_2.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_3.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_4.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_5.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_6.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_7.txt > /dev/null
+
+curl -XPUT 'http://localhost:9200/joey/_mappings/list?pretty=true' -d @joey_list_mappings.json
+curl -s -XPOST 'http://localhost:9200/joey/_bulk' --data-binary @joey_list.txt > /dev/null
+
+
+
+curl -XDELETE 'http://es.melon.com/joey'
+curl -XPUT 'http://es.melon.com/joey/' -d @joey_settings.json
+curl -XPUT 'http://es.melon.com/joey/_mappings/song?pretty=true' -d @joey_mappings.json
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_1.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_2.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_3.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_4.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_5.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_6.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_7.txt > /dev/null
+
+curl -XPUT 'http://es.melon.com/joey/_mappings/list?pretty=true' -d @joey_list_mappings.json
+curl -s -XPOST 'http://es.melon.com/joey/_bulk' --data-binary @joey_list.txt

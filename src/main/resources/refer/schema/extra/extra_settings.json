@@ -1,0 +1,21 @@
+{
+   "number_of_shards": 3,
+   "number_of_replicas": 0,
+   "translog.flush_threshold_ops": 5000,
+   "_source" : {
+     "enabled" : "true"
+    },
+     "_all" : {
+     "enabled" : "false"
+    },
+     "index" : {
+     "analysis" : {
+         "analyzer" : {
+             "song_keyword_analyzer" : {
+                 "tokenizer": "keyword",
+                 "filter" : ["lowercase"]
+             }
+         }
+     }
+ }
+}

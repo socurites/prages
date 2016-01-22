@@ -1,0 +1,21 @@
+{
+ "list" : {
+     "_source" : {
+         "enabled" : "true"
+     },
+     "_all" : {
+         "enabled" : "false"
+     },
+     "index_analyzer": "song_keyword_analyzer",
+     "search_analyzer": "song_keyword_analyzer",
+     "properties" : {
+         "songId" : {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         "artistId" : {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         "artistName" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "title" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "genre" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "genreText" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "issueDate" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"}
+     }
+ }
+}

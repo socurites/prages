@@ -1,0 +1,22 @@
+# delete index
+curl -XDELETE 'http://localhost:9200/extra'
+curl -XPUT 'http://localhost:9200/extra/' -d @extra_settings.json
+curl -XPUT 'http://localhost:9200/extra/_mappings/song?pretty=true' -d @extra_mappings.json
+curl -s -XPOST 'http://localhost:9200/extra/_bulk' --data-binary @extra_1.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/extra/_bulk' --data-binary @extra_2.txt > /dev/null
+curl -s -XPOST 'http://localhost:9200/extra/_bulk' --data-binary @extra_3.txt > /dev/null
+
+curl -XPUT 'http://localhost:9200/extra/_mappings/list?pretty=true' -d @extra_list_mappings.json
+curl -s -XPOST 'http://localhost:9200/extra/_bulk' --data-binary @extra_list.txt > /dev/null
+
+
+
+curl -XDELETE 'http://es.melon.com/extra'
+curl -XPUT 'http://es.melon.com/extra/' -d @extra_settings.json
+curl -XPUT 'http://es.melon.com/extra/_mappings/song?pretty=true' -d @extra_mappings.json
+curl -s -XPOST 'http://es.melon.com/extra/_bulk' --data-binary @extra_1.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/extra/_bulk' --data-binary @extra_2.txt > /dev/null
+curl -s -XPOST 'http://es.melon.com/extra/_bulk' --data-binary @extra_3.txt > /dev/null
+
+curl -XPUT 'http://es.melon.com/extra/_mappings/list?pretty=true' -d @extra_list_mappings.json
+curl -s -XPOST 'http://es.melon.com/extra/_bulk' --data-binary @extra_list.txt

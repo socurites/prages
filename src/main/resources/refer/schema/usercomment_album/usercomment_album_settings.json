@@ -1,0 +1,21 @@
+{
+   "number_of_shards": 1,
+   "number_of_replicas": 0,
+   "refresh_interval": "60s",
+   "_source" : {
+     "enabled" : "true"
+    },
+     "_all" : {
+     "enabled" : "false"
+    },
+     "index" : {
+	     "analysis" : {
+	         "analyzer" : {
+	             "m_keyword_analyzer" : {
+	                 "tokenizer": "keyword",
+	                 "filter" : ["lowercase"]
+	             }
+	         }
+		}
+	}
+}

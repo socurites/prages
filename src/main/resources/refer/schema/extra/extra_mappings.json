@@ -1,0 +1,26 @@
+{
+ "song" : {
+     "_source" : {
+         "enabled" : "true"
+     },
+     "_all" : {
+         "enabled" : "false"
+     },
+     "index_analyzer": "song_keyword_analyzer",
+     "search_analyzer": "song_keyword_analyzer",
+     "properties" : {
+         "songId" : {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         "recommendId" : {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         "artistId" : {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+         "artistName" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "title" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "genre" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "genreText" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "issueDate" : {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         "distance" : {"type" : "double", "store" : "yes", "index" : "not_analyzed"},
+         "mfcc" : {"type" : "double", "store" : "yes", "index" : "not_analyzed"},
+         "tempo" : {"type" : "double", "store" : "yes", "index" : "not_analyzed"},
+         "hpcp" : {"type" : "double", "store" : "yes", "index" : "not_analyzed"}
+     }
+ }
+}
