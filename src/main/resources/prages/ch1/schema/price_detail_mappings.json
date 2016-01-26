@@ -1,0 +1,24 @@
+{
+     "detail" : {
+         "_id" : {
+             "index" : "not_analyzed",
+             "path" : "priceInfo"
+         },
+         "_source" : {
+             "enabled" : "true"
+         },
+         "_all" : {
+             "enabled" : "false"
+         },
+         "properties" : {
+         	"collectDate"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"productId"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"categoryName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"productCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"productName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"price"							: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+			"discountPrice"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"promotionPrice"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"}
+         }
+     }
+ }

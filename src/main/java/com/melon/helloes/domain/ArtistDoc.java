@@ -1,9 +1,8 @@
 package com.melon.helloes.domain;
 
-
 public class ArtistDoc {
 	private String actType;
-	
+
 	private String artistImagePath;
 
 	/**
@@ -33,5 +32,5 @@ public class ArtistDoc {
 	public void setArtistImagePath(String artistImagePath) {
 		this.artistImagePath = artistImagePath;
 	}
-	
+
 }

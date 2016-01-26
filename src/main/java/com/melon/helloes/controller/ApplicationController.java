@@ -19,18 +19,19 @@ import com.melon.helloes.service.MApplyService;
 public class ApplicationController {
 	@Resource
 	private MApplyService applyService;
-	
+
 	@RequestMapping("/power_network")
 	public ModelAndView powerNetworkView() {
 		return new ModelAndView("site.apply.power_network");
 	}
-	
-	@RequestMapping(value="/power_network/search", produces = "application/json; charset=utf8")
-	public String powerNetworkSearch(@RequestParam("artistName") String artistName, @RequestParam("size") int size) throws UnsupportedEncodingException {
+
+	@RequestMapping(value = "/power_network/search", produces = "application/json; charset=utf8")
+	public String powerNetworkSearch(@RequestParam("artistName") String artistName, @RequestParam("size") int size)
+			throws UnsupportedEncodingException {
 		Map<String, NetworkItem> powerNetwork = applyService.getPowerNetwork(artistName, size);
-		
+
 		Gson gson = new Gson();
-		
+
 		return gson.toJson(powerNetwork);
 	}
 }

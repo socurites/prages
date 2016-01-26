@@ -12,7 +12,7 @@ public class ValueComparator implements Comparator {
 
 	@Override
 	public int compare(Object o1, Object o2) {
-		if (base.get((String)o1) >= base.get((String)o2)) {
+		if (base.get((String) o1) >= base.get((String) o2)) {
 			return -1;
 		} else {
 			return 1;

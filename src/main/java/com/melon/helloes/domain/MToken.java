@@ -18,8 +18,7 @@ public class MToken {
 	}
 
 	/**
-	 * @param term
-	 *            the term to set
+	 * @param term the term to set
 	 */
 	public void setTerm(String term) {
 		this.term = term;
@@ -33,8 +32,7 @@ public class MToken {
 	}
 
 	/**
-	 * @param type
-	 *            the type to set
+	 * @param type the type to set
 	 */
 	public void setType(String type) {
 		this.type = type;
@@ -48,8 +46,7 @@ public class MToken {
 	}
 
 	/**
-	 * @param pos
-	 *            the pos to set
+	 * @param pos the pos to set
 	 */
 	public void setPos(String pos) {
 		this.pos = pos;
@@ -74,16 +71,14 @@ public class MToken {
 	}
 
 	/**
-	 * @param sematicClass
-	 *            the sematicClass to set
+	 * @param sematicClass the sematicClass to set
 	 */
 	public void setSematicClass(String sematicClass) {
 		this.sematicClass = sematicClass;
 	}
 
 	/**
-	 * @param position
-	 *            the position to set
+	 * @param position the position to set
 	 */
 	public void setPosition(int position) {
 		this.position = position;
@@ -97,8 +92,7 @@ public class MToken {
 	}
 
 	/**
-	 * @param length
-	 *            the length to set
+	 * @param length the length to set
 	 */
 	public void setLength(int length) {
 		this.length = length;
@@ -112,8 +106,7 @@ public class MToken {
 	}
 
 	/**
-	 * @param startOffset
-	 *            the startOffset to set
+	 * @param startOffset the startOffset to set
 	 */
 	public void setStartOffset(int startOffset) {
 		this.startOffset = startOffset;
@@ -127,28 +120,21 @@ public class MToken {
 	}
 
 	/**
-	 * @param endOffset
-	 *            the endOffset to set
+	 * @param endOffset the endOffset to set
 	 */
 	public void setEndOffset(int endOffset) {
 		this.endOffset = endOffset;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return this.getTerm() + ":"
-			+  this.getType() + ":"
-			+  this.getPos() + ":"
-			+  this.getSematicClass() + ":"
-			+  this.getPosition() + ":"
-			+  this.getLength() + ":"
-			+  this.getStartOffset() + ":"
-			+  this.getEndOffset()
-			;
+		return this.getTerm() + ":" + this.getType() + ":" + this.getPos() + ":" + this.getSematicClass() + ":"
+				+ this.getPosition() + ":" + this.getLength() + ":" + this.getStartOffset() + ":" + this.getEndOffset();
 	}
 
-	
 }

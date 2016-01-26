@@ -13,18 +13,18 @@ public class MCatUtil {
 		URL url;
 		try {
 			url = new URL(urlString);
-			
+
 			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
 
 			for (String line; (line = reader.readLine()) != null;) {
 				sb.append(line);
-		    }
+			}
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return sb.toString();
 	}
 }

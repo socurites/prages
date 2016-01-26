@@ -22,25 +22,25 @@ public abstract class MAbstractSearchServiceImpl {
 	private static final String TYPE_NAME = "detail";
 	private static final String MELON_SEARCH_HTTP_URL = "http://localhost:9200";
 
-	protected String doSearch(Map<String, String> paramMap, String dslLocation,
-			String searchType) {
+	protected String doSearch(Map<String, String> paramMap, String dslLocation, String searchType) {
 		StringBuffer sb = new StringBuffer();
 
 		URL url;
 		try {
-			
-			if ( searchType == null ) {
+
+			if (searchType == null) {
 				url = new URL(MELON_SEARCH_HTTP_URL + "/" + INDEX_NAME + "/" + TYPE_NAME + "/_search");
 			} else {
-				url = new URL(MELON_SEARCH_HTTP_URL + "/" + INDEX_NAME + "/" + TYPE_NAME + "/_search?search_type=count");
+				url = new URL(
+						MELON_SEARCH_HTTP_URL + "/" + INDEX_NAME + "/" + TYPE_NAME + "/_search?search_type=count");
 			}
-			
+
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Content-Type", "application/json");
 
-			String input = null;
+			String input;
 			SearchDslResourceReader dslResourceReader = new SearchDslResourceReader();
 			input = dslResourceReader.getSearchDsl(dslLocation, paramMap);
 
@@ -48,8 +48,7 @@ public abstract class MAbstractSearchServiceImpl {
 			os.write(input.getBytes("UTF-8"));
 			os.flush();
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					(conn.getInputStream()), "UTF-8"));
+			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream()), "UTF-8"));
 
 			String line;
 			while ((line = br.readLine()) != null) {

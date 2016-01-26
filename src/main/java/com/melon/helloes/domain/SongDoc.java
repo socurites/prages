@@ -28,9 +28,9 @@ public class SongDoc {
 	private List<String> lyricists = new ArrayList<String>();
 	private List<String> composers = new ArrayList<String>();
 	private List<String> arrangers = new ArrayList<String>();
-	
+
 	private String actType;
-	
+
 	private String albumImagePath;
 	private String artistImagePath;
 
@@ -42,8 +42,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param songId
-	 *            the songId to set
+	 * @param songId the songId to set
 	 */
 	public void setSongId(String songId) {
 		this.songId = songId;
@@ -57,8 +56,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param title
-	 *            the title to set
+	 * @param title the title to set
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -72,8 +70,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param albumName
-	 *            the albumName to set
+	 * @param albumName the albumName to set
 	 */
 	public void setAlbumName(String albumName) {
 		this.albumName = albumName;
@@ -87,8 +84,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param artistId
-	 *            the artistId to set
+	 * @param artistId the artistId to set
 	 */
 	public void setArtistId(String artistId) {
 		this.artistId = artistId;
@@ -102,8 +98,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param artistName
-	 *            the artistName to set
+	 * @param artistName the artistName to set
 	 */
 	public void setArtistName(String artistName) {
 		this.artistName = artistName;
@@ -117,8 +112,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param issueDate
-	 *            the issueDate to set
+	 * @param issueDate the issueDate to set
 	 */
 	public void setIssueDate(Date issueDate) {
 		this.issueDate = issueDate;
@@ -132,8 +126,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param labelName
-	 *            the labelName to set
+	 * @param labelName the labelName to set
 	 */
 	public void setLabelName(String labelName) {
 		this.labelName = labelName;
@@ -147,8 +140,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param lyric
-	 *            the lyric to set
+	 * @param lyric the lyric to set
 	 */
 	public void setLyric(String lyric) {
 		this.lyric = lyric;
@@ -162,8 +154,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param genres
-	 *            the genres to set
+	 * @param genres the genres to set
 	 */
 	public void setGenres(List<String> genres) {
 		this.genres = genres;
@@ -177,8 +168,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param lyricists
-	 *            the lyricists to set
+	 * @param lyricists the lyricists to set
 	 */
 	public void setLyricists(List<String> lyricists) {
 		this.lyricists = lyricists;
@@ -192,8 +182,7 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param composers
-	 *            the composers to set
+	 * @param composers the composers to set
 	 */
 	public void setComposers(List<String> composers) {
 		this.composers = composers;
@@ -207,13 +196,12 @@ public class SongDoc {
 	}
 
 	/**
-	 * @param arrangers
-	 *            the arrangers to set
+	 * @param arrangers the arrangers to set
 	 */
 	public void setArrangers(List<String> arrangers) {
 		this.arrangers = arrangers;
 	}
-	
+
 	/**
 	 * @return the actType
 	 */
@@ -256,62 +244,56 @@ public class SongDoc {
 		this.artistImagePath = artistImagePath;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		String result =  "\"songId\" : \"" + this.songId + "\", \n"
-			 + "\"title_analz\" : \"" + escapeString(this.title) + "\", \n"
-			 + "\"title_token\" : \"" + escapeString(this.title) + "\", \n"
-			 + "\"title_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.title)) + "\", \n"
-			 + "\"album_name_analz\" : \"" + escapeString(this.albumName) + "\", \n"
-			 + "\"album_name_token\" : \"" + escapeString(this.albumName) + "\", \n"
-			 + "\"album_name_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.albumName)) + "\", \n"
-			 + "\"artist_id\" : \"" + this.artistId + "\", \n"
-			 + "\"artist_name_analz\" : \"" + escapeString(this.artistName) + "\", \n"
-			 + "\"artist_name_token\" : \"" + escapeString(this.artistName) + "\", \n"
-			 + "\"artist_name_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.artistName)) + "\", \n"
-			 + "\"label_name_analz\" : \"" + escapeString(this.labelName) + "\", \n"
-			 + "\"label_name_token\" : \"" + escapeString(this.labelName) + "\", \n"
-			 + "\"label_name_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.labelName)) + "\", \n"
-			 + "\"issue_date\" : \"" + MDateUtil.formatIssueDate(this.issueDate) + "\", \n"
-			 + "\"act_type\" : \"" + this.actType + "\", \n"
-			 + "\"album_image_path\" : \"" + this.albumImagePath + "\", \n"
-			 + "\"artist_image_path\" : \"" + this.artistImagePath + "\", \n"
-			 + "\"genres\" : " + formatList(this.genres) + ", \n"
-			 + "\"lyricists\" : " + formatList(this.lyricists) + ", \n"
-			 + "\"composers\" : " + formatList(this.composers) + ", \n"
-			 + "\"arrangers\" : " + formatList(this.arrangers) + ", \n"
-			 + "\"lyric_analz\" : \"" + escapeString(this.lyric) + "\", \n"
-			 + "\"lyric_token\" : \"" + escapeString(this.lyric) + "\""
-			 ;
-		
+		String result = "\"songId\" : \"" + this.songId + "\", \n" + "\"title_analz\" : \"" + escapeString(this.title)
+				+ "\", \n" + "\"title_token\" : \"" + escapeString(this.title) + "\", \n" + "\"title_token_eng\" : \""
+				+ MLanguageUtil.convertKo2Eng(escapeString(this.title)) + "\", \n" + "\"album_name_analz\" : \""
+				+ escapeString(this.albumName) + "\", \n" + "\"album_name_token\" : \"" + escapeString(this.albumName)
+				+ "\", \n" + "\"album_name_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.albumName))
+				+ "\", \n" + "\"artist_id\" : \"" + this.artistId + "\", \n" + "\"artist_name_analz\" : \""
+				+ escapeString(this.artistName) + "\", \n" + "\"artist_name_token\" : \""
+				+ escapeString(this.artistName) + "\", \n" + "\"artist_name_token_eng\" : \""
+				+ MLanguageUtil.convertKo2Eng(escapeString(this.artistName)) + "\", \n" + "\"label_name_analz\" : \""
+				+ escapeString(this.labelName) + "\", \n" + "\"label_name_token\" : \"" + escapeString(this.labelName)
+				+ "\", \n" + "\"label_name_token_eng\" : \"" + MLanguageUtil.convertKo2Eng(escapeString(this.labelName))
+				+ "\", \n" + "\"issue_date\" : \"" + MDateUtil.formatIssueDate(this.issueDate) + "\", \n"
+				+ "\"act_type\" : \"" + this.actType + "\", \n" + "\"album_image_path\" : \"" + this.albumImagePath
+				+ "\", \n" + "\"artist_image_path\" : \"" + this.artistImagePath + "\", \n" + "\"genres\" : "
+				+ formatList(this.genres) + ", \n" + "\"lyricists\" : " + formatList(this.lyricists) + ", \n"
+				+ "\"composers\" : " + formatList(this.composers) + ", \n" + "\"arrangers\" : "
+				+ formatList(this.arrangers) + ", \n" + "\"lyric_analz\" : \"" + escapeString(this.lyric) + "\", \n"
+				+ "\"lyric_token\" : \"" + escapeString(this.lyric) + "\"";
+
 		return result;
 	}
-	
+
 	private String escapeString(String str) {
-		return str.replaceAll("'", "\\u0027")
-				.replaceAll("\"", "\\u0022");
+		return str.replaceAll("'", "\\u0027").replaceAll("\"", "\\u0022");
 	}
-	
+
 	public String formatStringForBulk() {
 		return this.toString().replaceAll("\r\n", " ").replaceAll("\n", " ");
 	}
-	
+
 	private String formatList(List<String> list) {
 		String result = "[";
-		for ( int i = 0; i < list.size(); i++ ) {
+		for (int i = 0; i < list.size(); i++) {
 			result += "\"" + escapeString(list.get(i)) + "\"";
-			
-			if ( i != list.size() -1 ) {
+
+			if (i != list.size() - 1) {
 				result += ",";
 			}
 		}
-		
+
 		result += "]";
-		
+
 		return result;
 	}
-	
+
 }

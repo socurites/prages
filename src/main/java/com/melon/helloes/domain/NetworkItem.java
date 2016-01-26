@@ -25,8 +25,7 @@ public class NetworkItem {
 	}
 
 	/**
-	 * @param type
-	 *            the type to set
+	 * @param type the type to set
 	 */
 	public void setType(String type) {
 		this.type = type;
@@ -40,8 +39,7 @@ public class NetworkItem {
 	}
 
 	/**
-	 * @param depends
-	 *            the depends to set
+	 * @param depends the depends to set
 	 */
 	public void setDepends(Set<String> depends) {
 		this.depends = depends;
@@ -55,18 +53,17 @@ public class NetworkItem {
 	}
 
 	/**
-	 * @param artistName
-	 *            the artistName to set
+	 * @param artistName the artistName to set
 	 */
 	public void setArtistName(String artistName) {
 		this.artistName = artistName;
 		this.name = artistName.replaceAll(" ", "");
 	}
-	
+
 	public void addDependArtist(String name) {
 		this.dependArtists.add(name);
 		this.depends.add(name.replaceAll(" ", ""));
-		
+
 	}
 
 	/**
