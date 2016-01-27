@@ -13,8 +13,8 @@
 			"productCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"productName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"price"							: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
-			"discountPrice"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"promotionPrice"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"}
+			"discountPrice"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
+			"promotionPrice"				: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"}
          }
      }
  }
