@@ -7,7 +7,7 @@
              "enabled" : "false"
          },
          "properties" : {
-         	"collectDate"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"collectDate"					: {"type" : "date", "format": "yyyy-MM-dd", "store" : "yes", "index" : "not_analyzed"},
 			"productId"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"categoryName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"productCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
