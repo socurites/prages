@@ -1,9 +1,5 @@
 {
      "detail" : {
-         "_id" : {
-             "index" : "not_analyzed",
-             "path" : "priceInfo"
-         },
          "_source" : {
              "enabled" : "true"
          },
