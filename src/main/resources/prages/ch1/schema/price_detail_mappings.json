@@ -7,10 +7,10 @@
              "enabled" : "false"
          },
          "properties" : {
-         	"collectDate"					: {"type" : "date", "format": "yyyy-MM-dd", "store" : "yes", "index" : "not_analyzed"},
-			"productId"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+         	"logDate"					: {"type" : "date", "format": "yyyy-MM-dd", "store" : "yes", "index" : "not_analyzed"},
+			"productCode"						: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"categoryName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"productCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
+			"categoryCode"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"productName"					: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
 			"price"							: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
 			"discountPrice"					: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
