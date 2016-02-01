@@ -7,7 +7,7 @@ import org.junit.Before;
 /**
  * Created by hydra01 on 16. 2. 1.
  */
-public class AbstractBaseTest {
+public class AbstractBaseHttpTest {
     protected SimpleHttpUtil simpleHttpUtil;
     protected ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();
 

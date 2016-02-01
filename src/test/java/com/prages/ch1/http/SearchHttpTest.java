@@ -1,25 +1,16 @@
-package com.prages.ch1.esclient;
-
-import com.prages.util.HttpClientResponse;
-import com.prages.util.ResourceFileReadUtil;
-import com.prages.util.SimpleHttpUtil;
-import org.junit.Before;
-import org.junit.Test;
+package com.prages.ch1.http;
 
 import java.net.MalformedURLException;
+
+import com.prages.base.AbstractBaseHttpTest;
+import org.junit.Test;
+
+import com.prages.util.HttpClientResponse;
 
 /**
  * Created by lks21c on 16. 1. 29.
  */
-public class SearchTest {
-    private SimpleHttpUtil simpleHttpUtil;
-
-    ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();
-
-    @Before
-    public void setUp() throws Exception {
-        simpleHttpUtil = new SimpleHttpUtil();
-    }
+public class SearchHttpTest extends AbstractBaseHttpTest {
 
     @Test
     public void testSearch() throws MalformedURLException {

@@ -1,13 +1,13 @@
-package com.prages.ch1.json;
+package com.prages.ch1.http;
 
-import com.prages.base.AbstractBaseTest;
+import com.prages.base.AbstractBaseHttpTest;
 import com.prages.util.HttpClientResponse;
 import org.junit.Test;
 
 /**
  * Created by lks21c on 16. 1. 29.
  */
-public class IndexTest extends AbstractBaseTest {
+public class IndexHttpTest extends AbstractBaseHttpTest {
 
     @Test
     public void testDeleteIndex() throws Exception {
