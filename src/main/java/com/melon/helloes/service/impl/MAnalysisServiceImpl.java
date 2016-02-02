@@ -8,7 +8,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.melon.helloes.domain.MToken;
 import com.melon.helloes.domain.TermCount;
-import com.melon.helloes.runner.MMecabKoPosTagger;
+//import com.melon.helloes.runner.MMecabKoPosTagger;
 import com.melon.helloes.service.MAnalysisService;
 
 /**
@@ -17,6 +17,7 @@ import com.melon.helloes.service.MAnalysisService;
  * @author socurites
  *
  */
+/*
 @Service
 public class MAnalysisServiceImpl extends MAbstractSearchServiceImpl implements MAnalysisService {
 	public List<MToken> morphemeIntroAnalyze(String line) {
@@ -73,3 +74,4 @@ public class MAnalysisServiceImpl extends MAbstractSearchServiceImpl implements 
 	}
 
 }
+*/

@@ -6,6 +6,7 @@ import java.util.*;
 
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.*;
+/*
 import org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.MeCabKoTokenizer;
 import org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.StandardPosAppender;
 import org.bitbucket.eunjeon.mecab_ko_lucene_analyzer.TokenizerOption;
@@ -166,3 +167,4 @@ public class MMecabKoPosTagger {
 
 	}
 }
+*/

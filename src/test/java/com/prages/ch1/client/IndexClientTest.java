@@ -19,7 +19,7 @@ public class IndexClientTest extends AbstractBaseClientTest {
     @Test
     public void testDeleteIndex() throws Exception {
         DeleteIndexResponse deleteIndexResponse = indicesAdminClient.prepareDelete("priceinfo").get();
-        System.out.println(deleteIndexResponse.isAcknowledged());
+        System.out.println("isAcknowledged = " + deleteIndexResponse.isAcknowledged());
     }
 
 
@@ -29,7 +29,7 @@ public class IndexClientTest extends AbstractBaseClientTest {
                 .setSettings(resourceFileReadUtil.getFileContent("prages/ch1/schema/price_detail_settings.json"))
                 .addMapping("info", resourceFileReadUtil.getFileContent("prages/ch1/schema/price_detail_mappings.json"))
                 .get();
-        System.out.println(createIndexResponse.isAcknowledged());
+        System.out.println("isAcknowledged = " + createIndexResponse.isAcknowledged());
     }
 
     @Test

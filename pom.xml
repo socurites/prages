@@ -133,17 +133,18 @@
             <version>2.1.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.bitbucket.eunjeon</groupId>
-            <artifactId>mecab-ko-mecab-loader</artifactId>
-            <version>${eunjeon.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.bitbucket.eunjeon</groupId>-->
+            <!--<artifactId>mecab-ko-mecab-loader</artifactId>-->
+            <!--<version>${eunjeon.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.bitbucket.eunjeon</groupId>
-            <artifactId>mecab-ko-lucene-analyzer</artifactId>
-            <version>${eunjeon.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.bitbucket.eunjeon</groupId>-->
+            <!--<artifactId>mecab-ko-lucene-analyzer</artifactId>-->
+            <!--<version>${eunjeon.version}</version>-->
+        <!--</dependency>-->
+
     </dependencies>
 
     <build>
