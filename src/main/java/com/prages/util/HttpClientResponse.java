@@ -4,14 +4,19 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 
  * forked from : https://github.com/elastic/elasticsearch-river-wikipedia/blob/master/src/test/java/org/elasticsearch/river/wikipedia/helper/HttpClientResponse.java
- *
- * Created by lks21c on 16. 1. 29.
+ * 
+ * @author lks21c
  */
 public class HttpClientResponse {
+	/** Http 응답(JSON 포맷). */
 	private final String response;
+	/** 에러코드. */
 	private final int errorCode;
+	/** Http 응답 헤더. */
 	private Map<String, List<String>> headers;
+	/** 에러. */
 	private final Throwable e;
 
 	public HttpClientResponse(String response, int errorCode, Map<String, List<String>> headers, Throwable e) {

@@ -1,11 +1,13 @@
 package com.prages.ch1.http;
 
+import static org.junit.Assert.assertTrue;
 import com.prages.base.AbstractBaseHttpTest;
 import com.prages.util.HttpClientResponse;
 import org.junit.Test;
 
 /**
- * Created by lks21c on 16. 1. 29.
+ * @author lks21c
+ *
  */
 public class IndexHttpTest extends AbstractBaseHttpTest {
 
@@ -13,6 +15,7 @@ public class IndexHttpTest extends AbstractBaseHttpTest {
     public void testDeleteIndex() throws Exception {
         HttpClientResponse response = simpleHttpUtil.request("DELETE", "/priceinfo");
         System.out.println(response.response());
+        assertTrue(response.errorCode() < 400);
     }
 
     @Test
@@ -28,7 +31,9 @@ public class IndexHttpTest extends AbstractBaseHttpTest {
 
     @Test
     public void testIndex() throws Exception {
-        HttpClientResponse response = simpleHttpUtil.request("POST", "/priceinfo/info", resourceFileReadUtil.getFileContent("prages/ch1/schema/price_index.json"));
+    	String productCode = "C011030";
+        HttpClientResponse response = simpleHttpUtil.request("PUT", "/priceinfo/info/" + productCode, resourceFileReadUtil.getFileContent("prages/ch1/schema/price_index.json"));
         System.out.println(response.response());
+        assertTrue(response.errorCode() < 400);
     }
 }
