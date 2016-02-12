@@ -5,6 +5,9 @@ import java.net.URL;
 
 import org.junit.Test;
 
+import com.prages.common.util.HttpClientResponse;
+import com.prages.common.util.SimpleHttpUtil;
+
 public class SimpleHttpUtilTest {
 
 	@Test

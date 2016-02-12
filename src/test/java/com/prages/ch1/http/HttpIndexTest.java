@@ -2,14 +2,15 @@ package com.prages.ch1.http;
 
 import static org.junit.Assert.assertTrue;
 import com.prages.base.AbstractBaseHttpTest;
-import com.prages.util.HttpClientResponse;
+import com.prages.common.util.HttpClientResponse;
+
 import org.junit.Test;
 
 /**
  * @author lks21c
  *
  */
-public class IndexHttpTest extends AbstractBaseHttpTest {
+public class HttpIndexTest extends AbstractBaseHttpTest {
 
     @Test
     public void testDeleteIndex() throws Exception {

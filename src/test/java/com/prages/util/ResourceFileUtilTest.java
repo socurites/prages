@@ -4,6 +4,8 @@ import java.net.MalformedURLException;
 
 import org.junit.Test;
 
+import com.prages.common.util.ResourceFileReadUtil;
+
 public class ResourceFileUtilTest {
 
     ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();

@@ -1,4 +1,4 @@
-package com.prages.util;
+package com.prages.common.util;
 
 import java.util.List;
 import java.util.Map;

@@ -1,17 +1,26 @@
-package com.prages.ch1.http;
+package com.prages.ch1.client;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.prages.common.util.HttpClientResponse;
+import com.prages.common.util.ResourceFileReadUtil;
+import com.prages.common.util.SimpleHttpUtil;
 
 import java.net.MalformedURLException;
 
-import com.prages.base.AbstractBaseHttpTest;
-import org.junit.Test;
-
-import com.prages.util.HttpClientResponse;
-
 /**
- * @author lks21c
- *
+ * Created by lks21c on 16. 1. 29.
  */
-public class SearchHttpTest extends AbstractBaseHttpTest {
+public class ClientSearchTest {
+    private SimpleHttpUtil simpleHttpUtil;
+
+    ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();
+
+    @Before
+    public void setUp() throws Exception {
+        simpleHttpUtil = new SimpleHttpUtil();
+    }
 
     @Test
     public void testSearch() throws MalformedURLException {
