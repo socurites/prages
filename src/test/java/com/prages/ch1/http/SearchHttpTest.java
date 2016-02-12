@@ -8,7 +8,8 @@ import org.junit.Test;
 import com.prages.util.HttpClientResponse;
 
 /**
- * Created by lks21c on 16. 1. 29.
+ * @author lks21c
+ *
  */
 public class SearchHttpTest extends AbstractBaseHttpTest {
 

@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * 리소스 파일로 부터 내용을 읽어 문자열로 반환하는 유틸리티 클래스.
  *
- * Created by lks21c on 16. 1. 29.
+ * @author lks21c
  */
 public class ResourceFileReadUtil {
 
