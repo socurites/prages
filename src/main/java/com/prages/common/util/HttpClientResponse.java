@@ -12,16 +12,16 @@ import java.util.Map;
 public class HttpClientResponse {
 	/** Http 응답(JSON 포맷). */
 	private final String response;
-	/** 에러코드. */
-	private final int errorCode;
+	/** Http 응답 코드. */
+	private final int statusCode;
 	/** Http 응답 헤더. */
 	private Map<String, List<String>> headers;
 	/** 에러. */
 	private final Throwable e;
 
-	public HttpClientResponse(String response, int errorCode, Map<String, List<String>> headers, Throwable e) {
+	public HttpClientResponse(String response, int statusCode, Map<String, List<String>> headers, Throwable e) {
 		this.response = response;
-		this.errorCode = errorCode;
+		this.statusCode = statusCode;
 		this.headers = headers;
 		this.e = e;
 	}
@@ -30,8 +30,8 @@ public class HttpClientResponse {
 		return response;
 	}
 
-	public int errorCode() {
-		return errorCode;
+	public int statusCode() {
+		return statusCode;
 	}
 
 	public Throwable cause() {

@@ -16,6 +16,7 @@ public class HttpSearchTest extends AbstractBaseHttpTest {
     @Test
     public void testSearch() throws MalformedURLException {
         HttpClientResponse httpClientResponse = simpleHttpUtil.request("/priceinfo/info/_search");
+        System.out.println(httpClientResponse.statusCode());
         System.out.println(httpClientResponse.response());
     }
 
