@@ -27,8 +27,8 @@ public class HttpSearchTest extends AbstractBaseHttpTest {
 
     @Test
     public void testSearchWithQueryDsl() throws Exception {
-        String content = resourceFileReadUtil.getFileContent("prages/ch1/schema/search_dsl.json");
-        HttpClientResponse httpClientResponse = simpleHttpUtil.request("GET", "/priceinfo/info/_search", content);
+        String payload = resourceFileReadUtil.getFileContent("prages/ch1/schema/search_dsl.json");
+        HttpClientResponse httpClientResponse = simpleHttpUtil.request("GET", "/priceinfo/info/_search", payload);
         System.out.println(httpClientResponse.response());
     }
 }

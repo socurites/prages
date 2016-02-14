@@ -1,20 +1,45 @@
 {
-     "detail" : {
-         "_source" : {
-             "enabled" : "true"
-         },
-         "_all" : {
-             "enabled" : "false"
-         },
-         "properties" : {
-         	"logDate"					: {"type" : "date", "format": "yyyy-MM-dd", "store" : "yes", "index" : "not_analyzed"},
-			"productCode"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"categoryName"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"categoryCode"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"productName"				: {"type" : "string", "store" : "yes", "index" : "not_analyzed"},
-			"price"						: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
-			"discountPrice"				: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"},
-			"promotionPrice"				: {"type" : "integer", "store" : "yes", "index" : "not_analyzed"}
-         }
-     }
- }
+  "properties": {
+    "logDate": {
+      "type": "date",
+      "format": "yyyy-MM-dd",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "productCode": {
+      "type": "string",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "categoryName": {
+      "type": "string",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "categoryCode": {
+      "type": "string",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "productName": {
+      "type": "string",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "price": {
+      "type": "integer",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "discountPrice": {
+      "type": "integer",
+      "store": "yes",
+      "index": "not_analyzed"
+    },
+    "promotionPrice": {
+      "type": "integer",
+      "store": "yes",
+      "index": "not_analyzed"
+    }
+  }
+}
