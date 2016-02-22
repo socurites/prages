@@ -1,0 +1,12 @@
+GET /pricees/product/_search
+
+GET /pricees/product/_search?q=categoryCode:L012120
+
+GET /pricees/product/_search
+{
+ "query": {
+   "match": {
+     "categoryCode": "L012120"
+   }
+ }
+}

@@ -1,0 +1,8 @@
+PUT /pricees/product/2575762
+{
+  "logDate": "2015-08-01",
+  "categoryCode": "L012120",
+  "caegoryName": "영양크림",
+  "title": "Lavett & Chin Coconut Moisturizing Facial Mist 118ml",
+  "price": 70100.0
+}
