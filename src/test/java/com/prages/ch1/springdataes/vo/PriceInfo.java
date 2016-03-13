@@ -1,13 +1,18 @@
 package com.prages.ch1.springdataes.vo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.util.Date;
 
 /**
  * @author lks21c
  */
-public class ProductInfo {
+@Document(indexName = "priceinfo")
+public class PriceInfo {
     private Date logDate;
 
+    @Id
     private String productCode;
 
     private String categoryName;
