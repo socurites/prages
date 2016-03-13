@@ -3,15 +3,11 @@ package com.prages.ch1.springdataes.vo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import java.util.Date;
-
 /**
  * @author lks21c
  */
-@Document(indexName = "priceinfo")
+@Document(indexName = "priceinfo", type = "info")
 public class PriceInfo {
-    private Date logDate;
-
     @Id
     private String productCode;
 
@@ -27,11 +23,13 @@ public class PriceInfo {
 
     private int promotionPrice;
 
-    public Date getLogDate() {
+    private String logDate;
+
+    public String getLogDate() {
         return logDate;
     }
 
-    public void setLogDate(Date logDate) {
+    public void setLogDate(String logDate) {
         this.logDate = logDate;
     }
 

@@ -1,12 +1,20 @@
 package com.prages.ch1.springdataes;
 
 import com.prages.ch1.springdataes.config.SpringDataEsConfig;
+import com.prages.ch1.springdataes.repositories.ProductRepository;
+import com.prages.ch1.springdataes.vo.PriceInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.net.MalformedURLException;
+import java.util.List;
+
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author lks21c
@@ -22,17 +30,28 @@ import java.net.MalformedURLException;
 @ContextConfiguration(classes = SpringDataEsConfig.class)
 public class SpringDataEsSearchTest {
 
+    @Autowired
+    private ProductRepository productRepository;
+
     @Test
     public void testSearch() throws MalformedURLException {
-
+        Page<PriceInfo> priceInfoList = (Page<PriceInfo>) productRepository.findAll();
+        System.out.println(priceInfoList.getTotalPages());
+        assertNotEquals(0, priceInfoList.getTotalPages());
+        List<PriceInfo> list = priceInfoList.getContent();
+        assertNotEquals(0, list.size());
+        System.out.println(list.get(0).getProductName());
     }
 
     @Test
-    public void testSearchWithQueryString() throws Exception {
-
+    public void testSearchWithCategoryName() throws Exception {
+        List<PriceInfo> priceInfoList = productRepository.findByCategoryName("174456322");
+        assertTrue(priceInfoList.size() > 0);
     }
 
     @Test
-    public void testSearchWithQueryDsl() throws Exception {
+    public void testSearchWithId() throws Exception {
+        PriceInfo priceInfo = productRepository.findOne("C011030");
+        System.out.println(priceInfo.getProductName());
     }
 }
