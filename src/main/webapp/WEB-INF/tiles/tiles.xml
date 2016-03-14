@@ -7,10 +7,10 @@
 	<!-- Templates -->
 	<definition name="layout.basic" template="/WEB-INF/tiles/layout/basic.jsp">
 		<put-attribute name="title" value="Melon-HelloES" />
-		<put-attribute name="header" value="/WEB-INF/tiles/layout/view/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/tiles/layout/view/menu.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/view/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/tiles/view/menu.jsp"/>
 		<put-attribute name="body" value="" />
-		<put-attribute name="footer" value="/WEB-INF/tiles/layout/view/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/view/footer.jsp"/>
 	</definition>
 
 	<!-- Pages -->
@@ -21,12 +21,12 @@
 	<definition name="site.developer.install" extends="layout.basic">
 		<put-attribute name="body" value="/WEB-INF/views/developer/install.jsp" />
 	</definition>
-	
-	
-	<definition name="site.overview.intro" extends="layout.basic">
+
+    <definition name="site.overview.intro" extends="layout.basic">
 		<put-attribute name="body" value="/WEB-INF/views/overview/intro.jsp" />
 	</definition>
-	<definition name="site.overview.search" extends="layout.basic">
+
+    <definition name="site.overview.search" extends="layout.basic">
 		<put-attribute name="body" value="/WEB-INF/views/overview/search.jsp" />
 	</definition>
 	
