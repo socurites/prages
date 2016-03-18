@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import com.prages.config.PragEsConfig;
+import com.prages.web.config.PragEsConfig;
 
 /**
  * Created by lks21c on 16. 3. 18.

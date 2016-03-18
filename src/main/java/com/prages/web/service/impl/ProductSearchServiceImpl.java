@@ -45,8 +45,8 @@ public class ProductSearchServiceImpl implements ProductSearchService {
 		        .setQuery(mainQuery)
 		        .setFrom(page)
 		        .setSize(size)
-		        .addSort(fieldSort)
 		        .addSort(scoreSort)
+		        .addSort(fieldSort)
 		        .execute()
 		        .actionGet()
         ;

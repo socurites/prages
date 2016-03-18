@@ -1,4 +1,4 @@
-package com.prages.controller;
+package com.prages.web.controller;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;

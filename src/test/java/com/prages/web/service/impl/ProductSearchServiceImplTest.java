@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 import com.prages.common.domain.Product;
-import com.prages.config.PragEsConfig;
+import com.prages.web.config.PragEsConfig;
 import com.prages.web.service.ProductSearchService;
 
 /**

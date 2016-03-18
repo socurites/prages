@@ -1,4 +1,4 @@
-package com.prages.controller;
+package com.prages.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

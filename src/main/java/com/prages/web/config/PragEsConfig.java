@@ -1,4 +1,4 @@
-package com.prages.config;
+package com.prages.web.config;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
