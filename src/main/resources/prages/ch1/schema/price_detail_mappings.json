@@ -6,7 +6,7 @@
       "store": "yes",
       "index": "not_analyzed"
     },
-    "productCode": {
+    "id": {
       "type": "string",
       "store": "yes",
       "index": "not_analyzed"
@@ -21,23 +21,13 @@
       "store": "yes",
       "index": "not_analyzed"
     },
-    "productName": {
+    "title": {
       "type": "string",
       "store": "yes",
-      "index": "not_analyzed"
+      "index": "analyzed"
     },
     "price": {
-      "type": "integer",
-      "store": "yes",
-      "index": "not_analyzed"
-    },
-    "discountPrice": {
-      "type": "integer",
-      "store": "yes",
-      "index": "not_analyzed"
-    },
-    "promotionPrice": {
-      "type": "integer",
+      "type": "double",
       "store": "yes",
       "index": "not_analyzed"
     }

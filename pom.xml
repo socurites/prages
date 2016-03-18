@@ -11,6 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <es.version>2.2.0</es.version>
         <tiles.version>3.0.5</tiles.version>
+        <apache.commons.version>3.4</apache.commons.version>
         <start-class>com.prages.PragEsApplication</start-class>
     </properties>
 
@@ -75,6 +76,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        
+        <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons.version}</version>
+		</dependency>
 
         <!--<dependency>-->
         <!--<groupId>org.bitbucket.eunjeon</groupId>-->
