@@ -10,6 +10,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <es.version>2.2.0</es.version>
+        <tiles.version>3.0.5</tiles.version>
         <start-class>com.prages.PragEsApplication</start-class>
     </properties>
 
@@ -62,6 +63,7 @@
         <dependency>
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-jsp</artifactId>
+            <version>${tiles.version}</version>
         </dependency>
 
         <dependency>
