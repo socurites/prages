@@ -8,8 +8,8 @@ import java.io.*;
 public class CsvToBulkJsonUtil {
 
 	public static void main(String[] args) {
-		run("/extended/es_21/public_data/", "EUC-KR", "2015-10-01");
-	}
+        run("/home/lks21c/repo/prages/src/main/resources/prages/publicdata/", "EUC-KR", "2015-10-01");
+    }
 
 	private static void run(String inputFilePath, String inputFileEncoding, String date) {
 		BufferedReader reader = null;
@@ -29,8 +29,8 @@ public class CsvToBulkJsonUtil {
 				String title = field[4];
 				String price = field[5];
 				StringBuilder sb = new StringBuilder();
-				sb.append("{ \"index\":  { \"_index\": \"priceinfo_" + date + "\", \"_type\": \"info\", \"_id\": \""
-						+ id + "\" }}" + "\n");
+                sb.append("{ \"index\":  { \"_index\": \"price_" + date + "\", \"_type\": \"info\", \"_id\": \""
+                        + id + "\" }}" + "\n");
 				sb.append("{\"logDate\": \"" + logDate + "\"," + //
 						"\"id\": \"" + id + "\"," + //
 						"\"categoryName\": \"" + categoryName + "\"," + //

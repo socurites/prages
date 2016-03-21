@@ -1,11 +1,10 @@
 package com.prages.ch1.http;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
 import com.prages.base.AbstractBaseHttpTest;
 import com.prages.common.util.HttpClientResponse;
+import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author lks21c
@@ -44,13 +43,4 @@ public class HttpIndexTest extends AbstractBaseHttpTest {
 		System.out.println(response.response());
 		assertTrue(response.statusCode() < 400);
 	}
-
-	// @Test
-	// public void testBulkIndex() throws Exception {
-	// String id = "C011030";
-	// HttpClientResponse response = simpleHttpUtil.request("PUT", "/" + INDEX_NAME + "/" + INDEX_TYPE_NAME + "/" + id,
-	// resourceFileReadUtil.getFileContent("prages/ch1/schema/product_index.json"));
-	// System.out.println(response.response());
-	// assertTrue(response.statusCode() < 400);
-	// }
 }
