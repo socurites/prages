@@ -44,7 +44,7 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 		String id = "C011030";
 		IndexResponse indexResponse = client.prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId(id)
 				.setSource(resourceFileReadUtil.getFileContent("prages/ch1/schema/product_index.json")).get();
-		System.out.println(indexResponse.getVersion());
+		System.out.println("version = " + indexResponse.getVersion());
 		assertTrue(indexResponse.getVersion() > 0);
 	}
 }
