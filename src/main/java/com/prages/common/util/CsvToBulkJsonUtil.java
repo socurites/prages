@@ -8,21 +8,18 @@ import java.io.*;
 public class CsvToBulkJsonUtil {
 
 	public static void main(String[] args) {
-		run("/extended/es_21/public_data/2015-10-01.csv", "EUC-KR", "2015-10-01.txt");
-		run("/extended/es_21/public_data/2015-10-02.csv", "EUC-KR", "2015-10-02.txt");
-		run("/extended/es_21/public_data/2015-10-03.csv", "EUC-KR", "2015-10-03.txt");
-		run("/extended/es_21/public_data/2015-10-04.csv", "EUC-KR", "2015-10-04.txt");
-		run("/extended/es_21/public_data/2015-10-05.csv", "EUC-KR", "2015-10-05.txt");
+		run("/extended/es_21/public_data/", "EUC-KR", "2015-10-01");
 	}
 
-	private static void run(String inputFilePath, String inputFileEncoding, String outputFilePath) {
+	private static void run(String inputFilePath, String inputFileEncoding, String date) {
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		String line;
 		String cvsSplitBy = ",";
 		try {
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream(inputFilePath), inputFileEncoding));
-			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFilePath)));
+			reader = new BufferedReader(
+					new InputStreamReader(new FileInputStream(inputFilePath + date + ".csv"), inputFileEncoding));
+			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(date + ".txt")));
 			while ((line = reader.readLine()) != null) {
 				String[] field = line.split(cvsSplitBy);
 				String logDate = field[0];
@@ -32,15 +29,15 @@ public class CsvToBulkJsonUtil {
 				String title = field[4];
 				String price = field[5];
 				StringBuilder sb = new StringBuilder();
-				sb.append("{ \"index\":  { \"_index\": \"priceinfo\", \"_type\": \"info\", \"_id\": \"" + id
-						+ "\" }}" + "\n");
+				sb.append("{ \"index\":  { \"_index\": \"priceinfo_" + date + "\", \"_type\": \"info\", \"_id\": \""
+						+ id + "\" }}" + "\n");
 				sb.append("{\"logDate\": \"" + logDate + "\"," + //
 						"\"id\": \"" + id + "\"," + //
 						"\"categoryName\": \"" + categoryName + "\"," + //
 						"\"categoryCode\": \"" + categoryCode + "\"," + //
 						"\"title\": \"" + title + "\"," + //
 						"\"price\": \"" + price + "\"" + //
-						"\"}\n");
+						"}\n");
 				writer.write(sb.toString());
 				System.out.println(sb.toString() + "생성");
 			}

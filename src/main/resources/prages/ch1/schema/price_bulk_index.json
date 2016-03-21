@@ -1,0 +1,15 @@
+{
+  "index": {
+    "_index": "priceinfo_2015-10-01",
+    "_type": "info",
+    "_id": "L012010"
+  }
+}
+{
+  "logDate": "2015-10-01",
+  "id": "L012010",
+  "categoryName": "면도기",
+  "categoryCode": "2147480701",
+  "title": "필립스전기면도기 PT737",
+  "price": "77220.0"
+}

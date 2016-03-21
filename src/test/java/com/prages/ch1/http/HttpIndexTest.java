@@ -40,5 +40,14 @@ public class HttpIndexTest extends AbstractBaseHttpTest {
 				resourceFileReadUtil.getFileContent("prages/ch1/schema/price_index.json"));
         System.out.println(response.response());
         assertTrue(response.statusCode() < 400);
+	}
+
+	@Test
+	public void testBulkIndex() throws Exception {
+		String id = "C011030";
+		HttpClientResponse response = simpleHttpUtil.request("PUT", "/priceinfo/info/" + id,
+				resourceFileReadUtil.getFileContent("prages/ch1/schema/price_index.json"));
+		System.out.println(response.response());
+		assertTrue(response.statusCode() < 400);
     }
 }
