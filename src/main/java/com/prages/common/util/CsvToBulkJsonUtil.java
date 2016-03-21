@@ -8,7 +8,11 @@ import java.io.*;
 public class CsvToBulkJsonUtil {
 
 	public static void main(String[] args) {
-		run("/extended/es_21/public_data/2015-10-01.csv", "EUC-KR", "output.txt");
+		run("/extended/es_21/public_data/2015-10-01.csv", "EUC-KR", "2015-10-01.txt");
+		run("/extended/es_21/public_data/2015-10-02.csv", "EUC-KR", "2015-10-02.txt");
+		run("/extended/es_21/public_data/2015-10-03.csv", "EUC-KR", "2015-10-03.txt");
+		run("/extended/es_21/public_data/2015-10-04.csv", "EUC-KR", "2015-10-04.txt");
+		run("/extended/es_21/public_data/2015-10-05.csv", "EUC-KR", "2015-10-05.txt");
 	}
 
 	private static void run(String inputFilePath, String inputFileEncoding, String outputFilePath) {
@@ -22,30 +26,21 @@ public class CsvToBulkJsonUtil {
 			while ((line = reader.readLine()) != null) {
 				String[] field = line.split(cvsSplitBy);
 				String logDate = field[0];
-				String productCode = field[1];
+				String id = field[1];
 				String categoryName = field[2];
 				String categoryCode = field[3];
-				String productName = field[4];
+				String title = field[4];
 				String price = field[5];
-				String discountPrice = null;
-				String promotionPrice = null;
-				if (field.length > 6) {
-					discountPrice = field[6];
-				}
-				if (field.length > 7) {
-					promotionPrice = field[7];
-				}
 				StringBuilder sb = new StringBuilder();
-				sb.append("{ \"index\":  { \"_index\": \"priceinfo\", \"_type\": \"info\", \"_id\": \"" + productCode
+				sb.append("{ \"index\":  { \"_index\": \"priceinfo\", \"_type\": \"info\", \"_id\": \"" + id
 						+ "\" }}" + "\n");
 				sb.append("{\"logDate\": \"" + logDate + "\"," + //
-						"\"productCode\": \"" + productCode + "\"," + //
+						"\"id\": \"" + id + "\"," + //
 						"\"categoryName\": \"" + categoryName + "\"," + //
 						"\"categoryCode\": \"" + categoryCode + "\"," + //
-						"\"productName\": \"" + productName + "\"," + //
-						"\"price\": \"" + price + "\"," + //
-						"\"discountPrice\": \"" + discountPrice + "\"," + //
-						"\"promotionPrice\": \"" + promotionPrice + "\"}\n");
+						"\"title\": \"" + title + "\"," + //
+						"\"price\": \"" + price + "\"" + //
+						"\"}\n");
 				writer.write(sb.toString());
 				System.out.println(sb.toString() + "생성");
 			}
