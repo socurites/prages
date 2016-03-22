@@ -7,18 +7,17 @@ import java.io.*;
  */
 public class CsvToBulkJsonUtil {
 
-	public static void main(String[] args) {
-        run("/home/lks21c/repo/prages/src/main/resources/prages/publicdata/", "EUC-KR", "2015-10-01");
-    }
-
-	private static void run(String inputFilePath, String inputFileEncoding, String date) {
+	public void run(String inputFilePath, String inputFileEncoding, String date) {
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		String line;
 		String cvsSplitBy = ",";
 		try {
+			ClassLoader classLoader = getClass().getClassLoader();
 			reader = new BufferedReader(
-					new InputStreamReader(new FileInputStream(inputFilePath + date + ".csv"), inputFileEncoding));
+new InputStreamReader(
+					new FileInputStream(classLoader.getResource(inputFilePath + date + ".csv").getFile()),
+					inputFileEncoding));
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(date + ".txt")));
 			while ((line = reader.readLine()) != null) {
 				String[] field = line.split(cvsSplitBy);
@@ -29,7 +28,7 @@ public class CsvToBulkJsonUtil {
 				String title = field[4];
 				String price = field[5];
 				StringBuilder sb = new StringBuilder();
-                sb.append("{ \"index\":  { \"_index\": \"price_" + date + "\", \"_type\": \"info\", \"_id\": \""
+				sb.append("{ \"index\":  { \"_index\": \"product_" + date + "\", \"_type\": \"info\", \"_id\": \""
                         + id + "\" }}" + "\n");
 				sb.append("{\"logDate\": \"" + logDate + "\"," + //
 						"\"id\": \"" + id + "\"," + //
