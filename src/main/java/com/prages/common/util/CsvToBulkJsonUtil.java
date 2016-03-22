@@ -28,8 +28,8 @@ new InputStreamReader(
 				String title = field[4];
 				String price = field[5];
 				StringBuilder sb = new StringBuilder();
-				sb.append("{ \"index\":  { \"_index\": \"product_" + date + "\", \"_type\": \"info\", \"_id\": \""
-                        + id + "\" }}" + "\n");
+				// sb.append("{ \"index\": { \"_index\": \"product_" + date + "\", \"_type\": \"info\", \"_id\": \""
+				// + id + "\" }}" + "\n");
 				sb.append("{\"logDate\": \"" + logDate + "\"," + //
 						"\"id\": \"" + id + "\"," + //
 						"\"categoryName\": \"" + categoryName + "\"," + //
