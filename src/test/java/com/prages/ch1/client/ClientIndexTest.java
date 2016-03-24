@@ -3,14 +3,23 @@ package com.prages.ch1.client;
 import static com.prages.conts.SampleIndexConsatant.INDEX_NAME;
 import static com.prages.conts.SampleIndexConsatant.INDEX_TYPE_NAME;
 
+import java.util.concurrent.TimeUnit;
+
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.action.index.IndexRequest;
+import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.common.unit.ByteSizeUnit;
+import org.elasticsearch.common.unit.ByteSizeValue;
+import org.elasticsearch.common.unit.TimeValue;
 import org.junit.Test;
 
 import com.google.common.base.Charsets;
@@ -89,6 +98,89 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 		SearchResponse searchResponse = client().prepareSearch(INDEX_NAME).setTypes(INDEX_TYPE_NAME).get();
 		System.out.println(searchResponse.toString());
 		assertTrue(searchResponse.getHits().totalHits() > 0);
+	}
+
+	@Test
+	public void testBulkIndexWithBulkProcessor() throws Exception {
+		String id = "C011030";
+
+		// 인덱스 생성
+		createIndex();
+
+		// 벌크 색인 리스너 설정
+		BulkProcessor.Listener listener = new BulkProcessor.Listener() {
+			@Override
+			public void beforeBulk(long executionId, BulkRequest request) {
+
+			}
+
+			@Override
+			public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {
+				assertFalse(response.hasFailures());
+				assertTrue(response.getItems().length > 0);
+				System.out.println("response.getItems()[0].getId() = " + response.getItems()[0].getId());
+
+				// 문서가 색인되었는지 확인
+				checkDocumentExists(response.getItems()[0].getId());
+			}
+
+			@Override
+			public void afterBulk(long executionId, BulkRequest request, Throwable failure) {
+				System.out.println("fail");
+				System.out.println(failure.getMessage());
+			}
+		};
+
+		// 벌크 프로세서 설정
+		BulkProcessor processor = BulkProcessor.builder(client(), listener).setConcurrentRequests(1).setBulkActions(1)
+				.setFlushInterval(TimeValue.timeValueMillis(5000)).setBulkSize(new ByteSizeValue(50, ByteSizeUnit.MB))
+				.build();
+		IndexRequestBuilder builder = client().prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId(id)
+				.setSource(ResourceFileReadUtil.getFileContent("prages/ch1/schema/product_index.json"));
+		processor.add(builder.request());
+
+		// Flush
+		processor.flush();
+
+		// Close
+		processor.awaitClose(5, TimeUnit.SECONDS);
+	}
+
+	@Test
+	public void testBulkProcessorFlush() throws InterruptedException {
+
+		int numDocs = randomIntBetween(10, 100);
+
+		BulkProcessor.Listener listener = new BulkProcessor.Listener() {
+			@Override
+			public void beforeBulk(long executionId, BulkRequest request) {
+
+			}
+
+			@Override
+			public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {
+				System.out.println("success");
+				System.out.println(response.getItems()[0].getItemId());
+				System.out.println(response.hasFailures());
+			}
+
+			@Override
+			public void afterBulk(long executionId, BulkRequest request, Throwable failure) {
+
+			}
+		};
+
+		BulkProcessor processor = BulkProcessor.builder(client(), listener).setName("foo")
+				.setConcurrentRequests(randomIntBetween(0, 10)).setBulkActions(numDocs + randomIntBetween(1, 100))
+				.setFlushInterval(TimeValue.timeValueHours(24)).setBulkSize(new ByteSizeValue(1, ByteSizeUnit.GB))
+				.build();
+
+		processor.add(
+				new IndexRequest("test", "test", "id").source("field", randomRealisticUnicodeOfLengthBetween(1, 30)));
+
+		processor.flush();
+
+		Thread.sleep(5000);
 	}
 
 	private void createIndex() {
