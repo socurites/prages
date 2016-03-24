@@ -1,6 +1,7 @@
 package com.prages.ch1.client;
 
-import static com.prages.base.SampleIndexConsatant.*;
+import static com.prages.conts.SampleIndexConsatant.INDEX_NAME;
+import static com.prages.conts.SampleIndexConsatant.INDEX_TYPE_NAME;
 
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;

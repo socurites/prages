@@ -1,6 +1,7 @@
 package com.prages.spring;
 
-import static com.prages.base.SampleIndexConsatant.*;
+import static com.prages.conts.SampleIndexConsatant.INDEX_NAME;
+import static com.prages.conts.SampleIndexConsatant.INDEX_TYPE_NAME;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;

@@ -1,6 +1,7 @@
 package com.prages.ch1.http;
 
-import static com.prages.base.SampleIndexConsatant.*;
+import static com.prages.conts.SampleIndexConsatant.INDEX_NAME;
+import static com.prages.conts.SampleIndexConsatant.INDEX_TYPE_NAME;
 
 import java.net.MalformedURLException;
 
