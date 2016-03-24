@@ -61,8 +61,6 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 
 	@Test
 	public void testBulkIndex() throws Exception {
-		String id = "L012010";
-
 		// 인덱스 생성
 		createIndex();
 
