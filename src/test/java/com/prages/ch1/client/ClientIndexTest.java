@@ -7,6 +7,7 @@ import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.search.SearchResponse;
 import org.junit.Test;
 
 import com.google.common.base.Charsets;
@@ -70,34 +71,23 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 		String bulkAction = ResourceFileReadUtil.getFileContent("prages/publicdata/bulk_index_sample.txt");
 		bulkBuilder.add(bulkAction.getBytes(Charsets.UTF_8), 0, bulkAction.getBytes(Charsets.UTF_8).length);
 		BulkResponse bulkResponse = bulkBuilder.get();
+
+		System.out.println(bulkResponse.buildFailureMessage());
+
 		assertTrue(bulkResponse.getItems().length > 0);
 		assertFalse(bulkResponse.hasFailures());
-		System.out.println(bulkResponse.getItems()[0].getVersion());
-		System.out.println(bulkResponse.getItems()[0].getItemId());
+		System.out.println("version = " + bulkResponse.getItems()[0].getVersion());
+		System.out.println("id = " + bulkResponse.getItems()[0].getItemId());
 
 		System.out.println("Does bulkResponse have failures? = " + bulkResponse.hasFailures());
 
-		// 문서가 색인되었는지 확인
-		checkDocumentExists(id);
-	}
+		// Refresh
+		client().admin().indices().prepareRefresh(INDEX_NAME).get();
 
-	@Test
-	public void testBulkIndex2() throws Exception {
-		String id = "L012010";
-
-		// 인덱스 생성
-		createIndex();
-
-		BulkRequestBuilder bulkBuilder = client().prepareBulk();
-		bulkBuilder.add(client().prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId(id)
-				.setSource(ResourceFileReadUtil.getFileContent("prages/publicdata/bulk_index_sample2.txt")));
-		BulkResponse bulkResponse = bulkBuilder.get();
-		assertTrue(bulkResponse.getItems().length > 0);
-		assertTrue(!bulkResponse.hasFailures());
-		System.out.println("version = " + bulkResponse.getItems()[0].getVersion());
-
-		// 문서가 색인되었는지 확인
-		checkDocumentExists(id);
+		// 검색, 조건없음
+		SearchResponse searchResponse = client().prepareSearch(INDEX_NAME).setTypes(INDEX_TYPE_NAME).get();
+		System.out.println(searchResponse.toString());
+		assertTrue(searchResponse.getHits().totalHits() > 0);
 	}
 
 	private void createIndex() {
