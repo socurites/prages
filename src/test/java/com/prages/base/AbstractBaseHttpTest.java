@@ -11,7 +11,9 @@ import com.prages.common.util.SimpleHttpUtil;
 /**
  * Created by hydra01 on 16. 2. 1.
  */
-public class AbstractBaseHttpTest extends AbstractTest {
+public class AbstractBaseHttpTest {
+	protected static final String INDEX_NAME = "product";
+	protected static final String INDEX_TYPE_NAME = "info";
 	private static final String BASE_URL = "http://" + PragEsConstants.ES_HOST + ":" + PragEsConstants.ES_HTTP_PORT;
 	protected SimpleHttpUtil simpleHttpUtil;
 	protected ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();

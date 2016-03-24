@@ -9,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import com.prages.base.AbstractTest;
 import com.prages.web.config.PragEsConfig;
 
 /**
@@ -17,9 +16,12 @@ import com.prages.web.config.PragEsConfig;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { PragEsConfig.class }, loader = AnnotationConfigContextLoader.class)
-public class SampleSpringTest extends AbstractTest {
+public class SampleSpringTest {
 	@Autowired
 	private Client esClient;
+
+	private static final String INDEX_NAME = "product";
+	private static final String INDEX_TYPE_NAME = "info";
 
 	@Test
 	public void testName() throws Exception {

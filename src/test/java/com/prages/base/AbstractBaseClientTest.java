@@ -1,38 +1,14 @@
 package com.prages.base;
 
-import java.net.InetAddress;
-
-import org.elasticsearch.client.Client;
-import org.elasticsearch.client.IndicesAdminClient;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-
-import com.prages.common.env.PragEsConstants;
+import org.elasticsearch.test.ESIntegTestCase;
 
 /**
- * Created by hydra01 on 16. 2. 1.
+ * ES JAVA 클라이언트 테스트를 위한 베이스 클래스. 각 유닛 테스트의 독립성을 위해 클러스터를 공유하지 않고 실행
+ *
+ * @author lks21c
  */
-public class AbstractBaseClientTest extends AbstractTest {
-	protected static Client client;
-	protected static IndicesAdminClient indicesAdminClient;
-
-	@BeforeClass
-	public static void setUp() throws Exception {
-		Settings settings = Settings.settingsBuilder() //
-				.put("cluster.name", PragEsConstants.ES_CLUSTER_NAME) //
-				.build();
-
-		client = TransportClient.builder().settings(settings).build()
-				.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(PragEsConstants.ES_HOST),
-						PragEsConstants.ES_CLIENT_PORT));
-		indicesAdminClient = client.admin().indices();
-	}
-
-	@AfterClass
-	public static void tearDown() throws Exception {
-		client.close();
-	}
+@ESIntegTestCase.ClusterScope(scope = ESIntegTestCase.Scope.TEST)
+public class AbstractBaseClientTest extends ESIntegTestCase {
+	protected static final String INDEX_NAME = "product";
+	protected static final String INDEX_TYPE_NAME = "info";
 }
