@@ -8,6 +8,7 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.junit.Test;
 
 import com.prages.base.AbstractBaseClientTest;
+import com.prages.common.util.ResourceFileReadUtil;
 
 /**
  * Created by lks21c on 16. 1. 29.
@@ -23,7 +24,7 @@ public class ClientSearchTest extends AbstractBaseClientTest {
 
 	@Test
 	public void testSearchWithQueryDsl() throws Exception {
-		String source = resourceFileReadUtil.getFileContent("prages/ch1/search_dsl/search_dsl.dsl");
+		String source = ResourceFileReadUtil.getFileContent("prages/ch1/search_dsl/search_dsl.dsl");
 		SearchResponse searchResponse = client.prepareSearch(INDEX_NAME).setTypes(INDEX_TYPE_NAME).setSource(source)
 				.get();
 		System.out.println(searchResponse.toString());

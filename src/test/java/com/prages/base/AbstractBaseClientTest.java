@@ -11,7 +11,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 import com.prages.common.env.PragEsConstants;
-import com.prages.common.util.ResourceFileReadUtil;
 
 /**
  * Created by hydra01 on 16. 2. 1.
@@ -19,11 +18,12 @@ import com.prages.common.util.ResourceFileReadUtil;
 public class AbstractBaseClientTest extends AbstractTest {
 	protected static Client client;
 	protected static IndicesAdminClient indicesAdminClient;
-	protected ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		Settings settings = Settings.settingsBuilder().put("cluster.name", PragEsConstants.ES_CLUSTER_NAME).build();
+		Settings settings = Settings.settingsBuilder() //
+				.put("cluster.name", PragEsConstants.ES_CLUSTER_NAME) //
+				.build();
 
 		client = TransportClient.builder().settings(settings).build()
 				.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(PragEsConstants.ES_HOST),

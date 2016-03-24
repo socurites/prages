@@ -11,8 +11,8 @@ import java.util.Scanner;
  */
 public class ResourceFileReadUtil {
 
-	public String getFileContent(String fileName) {
-		ClassLoader classLoader = getClass().getClassLoader();
+	public static String getFileContent(String fileName) {
+		ClassLoader classLoader = ResourceFileReadUtil.class.getClassLoader();
 		File file = new File(classLoader.getResource(fileName).getFile());
 		StringBuilder sb = new StringBuilder("");
 		try (Scanner scanner = new Scanner(file)) {

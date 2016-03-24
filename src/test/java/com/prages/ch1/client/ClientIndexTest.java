@@ -10,7 +10,9 @@ import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexResponse;
 import org.junit.Test;
 
+import com.google.common.base.Charsets;
 import com.prages.base.AbstractBaseClientTest;
+import com.prages.common.util.ResourceFileReadUtil;
 
 /**
  * Created by lks21c on 16. 1. 29.
@@ -32,9 +34,9 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 		IndicesExistsResponse indicesExistsResponse = indicesAdminClient.prepareExists(INDEX_NAME).get();
 		if (!indicesExistsResponse.isExists()) {
 			CreateIndexResponse createIndexResponse = indicesAdminClient.prepareCreate(INDEX_NAME)
-					.setSettings(resourceFileReadUtil.getFileContent("prages/ch1/schema/product_detail_settings.json"))
+					.setSettings(ResourceFileReadUtil.getFileContent("prages/ch1/schema/product_detail_settings.json"))
 					.addMapping(INDEX_TYPE_NAME,
-							resourceFileReadUtil.getFileContent("prages/ch1/schema/product_detail_mappings.json"))
+							ResourceFileReadUtil.getFileContent("prages/ch1/schema/product_detail_mappings.json"))
 					.get();
 			System.out.println("isAcknowledged = " + createIndexResponse.isAcknowledged());
 			assertTrue(createIndexResponse.isAcknowledged());
@@ -45,20 +47,32 @@ public class ClientIndexTest extends AbstractBaseClientTest {
 	public void testIndex() throws Exception {
 		String id = "C011030";
 		IndexResponse indexResponse = client.prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId(id)
-				.setSource(resourceFileReadUtil.getFileContent("prages/ch1/schema/product_index.json")).get();
+				.setSource(ResourceFileReadUtil.getFileContent("prages/ch1/schema/product_index.json")).get();
 		System.out.println("version = " + indexResponse.getVersion());
 		assertTrue(indexResponse.getVersion() > 0);
 	}
 
 	@Test
 	public void testBulkIndex() throws Exception {
-		String sampleText = resourceFileReadUtil.getFileContent("prages/publicdata/sample.txt");
-		System.out.println(sampleText);
-		BulkRequestBuilder bulkdBuilder = client.prepareBulk();
-		bulkdBuilder.add(client.prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId("L012010")
-				.setSource(resourceFileReadUtil.getFileContent("prages/publicdata/sample.txt")));
-		BulkResponse bulkResponse = bulkdBuilder.get();
+		BulkRequestBuilder bulkBuilder = client.prepareBulk();
+		bulkBuilder.add(client.prepareIndex(INDEX_NAME, INDEX_TYPE_NAME).setId("L012010")
+				.setSource(ResourceFileReadUtil.getFileContent("prages/publicdata/sample.txt")));
+		BulkResponse bulkResponse = bulkBuilder.get();
 		assertTrue(bulkResponse.getItems().length > 0);
+		assertTrue(!bulkResponse.hasFailures());
+		System.out.println("version = " + bulkResponse.getItems()[0].getVersion());
+	}
+
+	@Test
+	public void testBulkIndex2() throws Exception {
+		BulkRequestBuilder bulkBuilder = client.prepareBulk();
+
+		String bulkAction = ResourceFileReadUtil.getFileContent("prages/publicdata/sample2.txt");
+		bulkBuilder.add(bulkAction.getBytes(Charsets.UTF_8), 0, bulkAction.getBytes(Charsets.UTF_8).length);
+		BulkResponse bulkResponse = bulkBuilder.get();
+
+		assertTrue(bulkResponse.getItems().length > 0);
+		System.out.println("fail message = " + bulkResponse.buildFailureMessage());
 		assertTrue(!bulkResponse.hasFailures());
 		System.out.println("version = " + bulkResponse.getItems()[0].getVersion());
 	}
