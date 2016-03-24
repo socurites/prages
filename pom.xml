@@ -12,6 +12,7 @@
         <es.version>2.2.1</es.version>
         <tiles.version>3.0.5</tiles.version>
         <apache.commons.version>3.4</apache.commons.version>
+        <lucene.testframework.version>5.4.1</lucene.testframework.version>
         <start-class>com.prages.PragEsApplication</start-class>
     </properties>
 
@@ -27,6 +28,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -56,6 +63,12 @@
             <artifactId>elasticsearch</artifactId>
             <version>${es.version}</version>
             <type>test-jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-test-framework</artifactId>
+            <version>${lucene.testframework.version}</version>
             <scope>test</scope>
         </dependency>
 

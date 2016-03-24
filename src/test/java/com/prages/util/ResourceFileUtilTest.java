@@ -8,11 +8,9 @@ import com.prages.common.util.ResourceFileReadUtil;
 
 public class ResourceFileUtilTest {
 
-    ResourceFileReadUtil resourceFileReadUtil = new ResourceFileReadUtil();
-
 	@Test
 	public void testGetFileContent() throws MalformedURLException {
-        String content = resourceFileReadUtil.getFileContent("korean.txt");
+		String content = ResourceFileReadUtil.getFileContent("korean.txt");
         System.out.println("content = " + content);
     }
 
