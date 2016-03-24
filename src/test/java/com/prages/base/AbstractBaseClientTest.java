@@ -9,6 +9,4 @@ import org.elasticsearch.test.ESIntegTestCase;
  */
 @ESIntegTestCase.ClusterScope(scope = ESIntegTestCase.Scope.TEST)
 public class AbstractBaseClientTest extends ESIntegTestCase {
-	protected static final String INDEX_NAME = "product";
-	protected static final String INDEX_TYPE_NAME = "info";
 }

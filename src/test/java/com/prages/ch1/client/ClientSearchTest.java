@@ -1,5 +1,7 @@
 package com.prages.ch1.client;
 
+import static com.prages.base.SampleIndexConsatant.*;
+
 import java.net.MalformedURLException;
 
 import org.elasticsearch.action.index.IndexResponse;

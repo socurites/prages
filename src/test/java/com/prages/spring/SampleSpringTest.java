@@ -1,5 +1,7 @@
 package com.prages.spring;
 
+import static com.prages.base.SampleIndexConsatant.*;
+
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
 import org.junit.Test;
@@ -19,9 +21,6 @@ import com.prages.web.config.PragEsConfig;
 public class SampleSpringTest {
 	@Autowired
 	private Client esClient;
-
-	private static final String INDEX_NAME = "product";
-	private static final String INDEX_TYPE_NAME = "info";
 
 	@Test
 	public void testName() throws Exception {

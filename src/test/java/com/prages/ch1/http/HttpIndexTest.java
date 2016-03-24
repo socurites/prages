@@ -1,10 +1,12 @@
 package com.prages.ch1.http;
 
-import com.prages.base.AbstractBaseHttpTest;
-import com.prages.common.util.HttpClientResponse;
+import static com.prages.base.SampleIndexConsatant.*;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import com.prages.base.AbstractBaseHttpTest;
+import com.prages.common.util.HttpClientResponse;
 
 /**
  * @author lks21c
