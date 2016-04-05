@@ -12,7 +12,7 @@
         <es.version>2.1.0</es.version>
         <tiles.version>3.0.5</tiles.version>
         <apache.commons.version>3.4</apache.commons.version>
-        <lucene.testframework.version>5.4.1</lucene.testframework.version>
+        <lucene.testframework.version>5.3.1</lucene.testframework.version>
         <start-class>com.prages.PragEsApplication</start-class>
     </properties>
 
